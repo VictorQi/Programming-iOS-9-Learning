@@ -58,11 +58,18 @@ class ViewController: UIViewController {
         self.iv.contentMode = .ScaleAspectFill
         self.iv.clipsToBounds = true
         
+        twoMarsDraw(at: mainview)
         
         let drawing = Drawing(frame: CGRect(x: 180, y: 20, width: 100, height: 100))
         mainview.addSubview(drawing)
         
-        drawingIntoPicture(mainview)
+        drawingIntoPicture(from: mainview)
+        
+        let img = blendTwoMars()
+        let sz = img.size
+        let imv = UIImageView(frame: CGRect(x: sz.width, y: 450, width: sz.width, height: sz.height))
+        imv.image = img
+        mainview.addSubview(imv)
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,7 +77,37 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func drawingIntoPicture(mainview: UIView) {
+    func twoMarsDraw(at mainview: UIView) {
+        let img = UIImage(named: "MarsNew")!
+        let sz = img.size
+        UIGraphicsBeginImageContextWithOptions(
+            CGSize(
+                width: 2*sz.width,
+                height: sz.height
+            ), false, 0.0)
+        img.drawAtPoint(CGPoint(x: 0.0, y: 0.0))
+        img.drawAtPoint(CGPoint(x: sz.width, y: 0.0))
+        let im = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        let imv = UIImageView(frame: CGRect(x: 0.0, y: 450, width: im.size.width, height: im.size.height))
+        imv.image = im
+        mainview.addSubview(imv)
+    }
+    
+    func blendTwoMars() -> UIImage {
+        let mars = UIImage(named: "MarsNew")!
+        let sz = mars.size
+        UIGraphicsBeginImageContextWithOptions(
+            CGSize(width: 2*sz.width, height: 2*sz.height), false, 0.0)
+        mars.drawInRect(CGRect(x: 0.0, y: 0.0, width: 2*sz.width, height: 2*sz.height))
+        mars.drawInRect(CGRect(x: sz.width/2, y: sz.height/2, width: sz.width, height: sz.height), blendMode: .Multiply, alpha: 1.0)
+        let im = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return im
+    }
+    
+    func drawingIntoPicture(from mainview: UIView) {
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 100, height: 100), false, 0)
         let con = UIGraphicsGetCurrentContext()!
         CGContextAddEllipseInRect(con, CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -82,11 +119,6 @@ class ViewController: UIViewController {
         let imgV = UIImageView(frame: CGRect(x: 180, y: 450, width: 100, height: 100))
         imgV.image = im
         mainview.addSubview(imgV)
-    }
-    
-    func drawingIntoPicture(from mainview: UIView) {
-        UIGraphicsEndImageContext()
-        
     }
 }
 
