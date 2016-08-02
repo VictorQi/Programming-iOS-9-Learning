@@ -57,13 +57,63 @@ class ViewController: UIViewController {
         self.iv.image = marsTiled
         self.iv.contentMode = .ScaleAspectFill
         self.iv.clipsToBounds = true
+        
+        
+        let drawing = Drawing(frame: CGRect(x: 180, y: 20, width: 100, height: 100))
+        mainview.addSubview(drawing)
+        
+        drawingIntoPicture(mainview)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func drawingIntoPicture(mainview: UIView) {
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 100, height: 100), false, 0)
+        let con = UIGraphicsGetCurrentContext()!
+        CGContextAddEllipseInRect(con, CGRect(x: 0, y: 0, width: 100, height: 100))
+        CGContextSetFillColorWithColor(con, UIColor.blueColor().CGColor)
+        CGContextFillPath(con)
+        let im = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        let imgV = UIImageView(frame: CGRect(x: 180, y: 450, width: 100, height: 100))
+        imgV.image = im
+        mainview.addSubview(imgV)
+    }
+    
+    func drawingIntoPicture(from mainview: UIView) {
+        UIGraphicsEndImageContext()
+        
+    }
 }
 
+class MyView1: UIView {
+    override func drawRect(rect: CGRect) {
+        let p = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 100, height: 100))
+        UIColor.blueColor().setFill()
+        p.fill()
+    }
+}
+
+class MyView2: UIView {
+    override func drawRect(rect: CGRect) {
+        let con = UIGraphicsGetCurrentContext()
+        CGContextAddEllipseInRect(con, CGRect(x: 0, y: 0, width: 100, height: 100))
+        CGContextSetFillColorWithColor(con, UIColor.blueColor().CGColor)
+        CGContextFillPath(con)
+    }
+}
+
+class MyView3: UIView {
+    override func drawRect(rect: CGRect) {}
+    override func drawLayer(layer: CALayer, inContext ctx: CGContext) {
+        UIGraphicsPushContext(ctx)
+        let p = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 100, height: 100))
+        UIColor.blueColor().setFill()
+        p.fill()
+        UIGraphicsPopContext()
+    }
+}
