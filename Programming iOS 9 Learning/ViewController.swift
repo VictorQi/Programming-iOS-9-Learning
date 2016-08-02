@@ -120,6 +120,16 @@ class ViewController: UIViewController {
         imgV.image = im
         mainview.addSubview(imgV)
     }
+    
+    func drawHalfMars() -> UIImage {
+        let mars = UIImage(named: "MarsNew")!
+        let sz = mars.size
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: sz.width/2, height: sz.height), false, 0.0)
+        mars.drawAtPoint(CGPoint(x: -sz.width/2, y: 0.0))
+        let im = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return im
+    }
 }
 
 class MyView1: UIView {
