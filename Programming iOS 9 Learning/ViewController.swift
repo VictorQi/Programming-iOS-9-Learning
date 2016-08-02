@@ -65,9 +65,10 @@ class ViewController: UIViewController {
         
         drawingIntoPicture(from: mainview)
         
-        let img = blendTwoMars()
+//        let img = blendTwoMars()
+        let img = drawHalfMars()
         let sz = img.size
-        let imv = UIImageView(frame: CGRect(x: sz.width, y: 450, width: sz.width, height: sz.height))
+        let imv = UIImageView(frame: CGRect(x: sz.width, y: 600, width: sz.width, height: sz.height))
         imv.image = img
         mainview.addSubview(imv)
     }
