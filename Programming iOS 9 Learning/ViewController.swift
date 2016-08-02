@@ -79,6 +79,31 @@ class ViewController: UIViewController {
         let im = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         let imgV = UIImageView(frame: CGRect(x: 180, y: 450, width: 100, height: 100))
         imgV.image = im
         mainview.addSubview(imgV)
