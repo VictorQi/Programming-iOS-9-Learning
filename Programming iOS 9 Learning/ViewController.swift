@@ -16,17 +16,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let mainview = view;
         
-//        let v1 = UIView(frame: CGRect(x: 113, y: 111, width: 132, height: 194))
-//        v1.backgroundColor = UIColor(red: 1, green: 0.4, blue: 1, alpha: 1)
-//        let v2 = UIView(frame: v1.bounds.insetBy(dx: 10, dy: 10))
-//        v2.backgroundColor = UIColor(red: 0.5, green: 1.0, blue: 0, alpha: 1.0)
-//        mainview.addSubview(v1)
-//        v1.addSubview(v2)
-//        
-//        v2.transform = CGAffineTransformMakeTranslation(100, 0)
-//        v2.transform = CGAffineTransformRotate(v2.transform, CGFloat(M_PI_4))
-//        v1.transform = CGAffineTransformMake(1, 0, -0.2, 1, 0, 0)
-//        
+        let v1 = UIView(frame: CGRect(x: 113, y: 111, width: 132, height: 194))
+        v1.backgroundColor = UIColor(red: 1, green: 0.4, blue: 1, alpha: 1)
+        let v2 = UIView(frame: v1.bounds.insetBy(dx: 10, dy: 10))
+        v2.backgroundColor = UIColor(red: 0.5, green: 1.0, blue: 0, alpha: 1.0)
+        mainview.addSubview(v1)
+        v1.addSubview(v2)
+        
+        v2.transform = CGAffineTransformMakeTranslation(100, 0)
+        v2.transform = CGAffineTransformRotate(v2.transform, CGFloat(M_PI_4))
+        v1.transform = CGAffineTransformMake(1, 0, -0.2, 1, 0, 0)
+        
         
         let path = (NSBundle.mainBundle().resourcePath! as NSString).stringByAppendingPathComponent("logoRed.png")
         let image = UIImage.init(contentsOfFile: path)
@@ -65,9 +65,9 @@ class ViewController: UIViewController {
         
         drawingIntoPicture(from: mainview)
         
-        let img = blendTwoMars()
+        let img = drawingSplitingImage()
         let sz = img.size
-        let imv = UIImageView(frame: CGRect(x: sz.width, y: 450, width: sz.width, height: sz.height))
+        let imv = UIImageView(frame: CGRect(x: 0.0, y: 200, width: sz.width, height: sz.height))
         imv.image = img
         mainview.addSubview(imv)
     }
@@ -119,6 +119,34 @@ class ViewController: UIViewController {
         let imgV = UIImageView(frame: CGRect(x: 180, y: 450, width: 100, height: 100))
         imgV.image = im
         mainview.addSubview(imgV)
+    }
+    
+    func drawingSplitingImage() -> UIImage {
+        let mars = UIImage(named: "MarsNew")!
+        let marsCG = mars.CGImage
+        let sz = mars.size
+        let szCG = CGSize(width: CGFloat(CGImageGetWidth(marsCG)), height: CGFloat(CGImageGetHeight(marsCG)))
+        let marsLeft = CGImageCreateWithImageInRect(
+            marsCG,
+            CGRect(x: 0, y: 0, width: szCG.width/2.0, height: szCG.height))
+        let marsRight = CGImageCreateWithImageInRect(
+            marsCG,
+            CGRect(x: szCG.width/2.0, y: 0, width: szCG.width/2.0, height: szCG.height))
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: sz.width*1.5, height: sz.height), false, 0.0)
+
+//        let context = UIGraphicsGetCurrentContext()!
+//        CGContextDrawImage(context, CGRect(x: 0.0, y: 0.0, width: sz.width/2.0, height: sz.height), marsLeft)
+//        CGContextDrawImage(context, CGRect(x: sz.width, y: 0.0, width: sz.width/2.0, height: sz.height), marsRight)
+
+//        直接使用UIImage绘制来解决flipping和scale问题
+        UIImage(CGImage: marsLeft!, scale: mars.scale, orientation: mars.imageOrientation).drawAtPoint(CGPoint(x: 0.0, y: 0.0))
+        UIImage(CGImage: marsRight!, scale: mars.scale, orientation: mars.imageOrientation).drawAtPoint(CGPoint(x: sz.width, y: 0.0))
+        
+        let im = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return im
     }
 }
 
