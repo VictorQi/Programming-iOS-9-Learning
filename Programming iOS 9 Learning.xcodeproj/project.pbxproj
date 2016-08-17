@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5717DA381D647E570030B446 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5717DA371D647E570030B446 /* FilterViewController.swift */; };
 		57C4C5171D4F3DF0000E5351 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C4C5161D4F3DF0000E5351 /* Drawing.swift */; };
 		57E536731D48A83A002B659E /* logoRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E536711D48A83A002B659E /* logoRed@2x.png */; };
 		57E536741D48A83A002B659E /* logoRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E536721D48A83A002B659E /* logoRed@3x.png */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5717DA371D647E570030B446 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		57C4C5161D4F3DF0000E5351 /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		57E536711D48A83A002B659E /* logoRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoRed@2x.png"; sourceTree = "<group>"; };
 		57E536721D48A83A002B659E /* logoRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoRed@3x.png"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				57E536701D48A815002B659E /* Resource */,
 				57F05EDC1D33934C00EE745D /* AppDelegate.swift */,
 				57F05EDE1D33934C00EE745D /* ViewController.swift */,
+				5717DA371D647E570030B446 /* FilterViewController.swift */,
 				57C4C5161D4F3DF0000E5351 /* Drawing.swift */,
 				57F05EE01D33934C00EE745D /* Main.storyboard */,
 				57F05EE31D33934C00EE745D /* Assets.xcassets */,
@@ -165,6 +168,7 @@
 			files = (
 				57F05EDF1D33934C00EE745D /* ViewController.swift in Sources */,
 				57F05EDD1D33934C00EE745D /* AppDelegate.swift in Sources */,
+				5717DA381D647E570030B446 /* FilterViewController.swift in Sources */,
 				57C4C5171D4F3DF0000E5351 /* Drawing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

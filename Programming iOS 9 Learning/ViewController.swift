@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         let path = (NSBundle.mainBundle().resourcePath! as NSString).stringByAppendingPathComponent("logoRed.png")
         let image = UIImage.init(contentsOfFile: path)
         
-        let v3 = UIImageView(frame: CGRect(origin: CGPoint(x: 20, y: 20), size: image!.size))
+        let v3 = UIImageView(frame: CGRect(origin: CGPoint(x: 20, y: 64), size: image!.size))
         v3.image = image
         mainview.addSubview(v3)
         
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         
         twoMarsDraw(at: mainview)
         
-        let drawing = Drawing(frame: CGRect(x: 180, y: 20, width: 100, height: 100))
+        let drawing = Drawing(frame: CGRect(x: 180, y: 64, width: 100, height: 100))
         mainview.addSubview(drawing)
         
         drawingIntoPicture(from: mainview)
@@ -177,3 +177,4 @@ class MyView3: UIView {
         UIGraphicsPopContext()
     }
 }
+
