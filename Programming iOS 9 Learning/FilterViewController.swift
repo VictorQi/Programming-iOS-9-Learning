@@ -7,14 +7,64 @@
 //
 
 import UIKit
+import SnapKit
 
 class FilterViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var visualView: UIView!
+    
     let context = CIContext(options: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.imageViewDraw()
+        
+        self.visualViewDraw()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
+    private func visualViewDraw() {
+
+        let v1 = UIView(frame:CGRectMake(70, 51, 132, 194))
+        v1.backgroundColor = UIColor(red: 1, green: 0.4, blue: 1, alpha: 1)
+        let v2 = UIView(frame:CGRectMake(41, 56, 132, 194))
+        v2.backgroundColor = UIColor(red: 0.5, green: 1, blue: 0, alpha: 1)
+        let v3 = UIView(frame:CGRectMake(0, 137, 160, 230))
+        v3.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+        visualView.addSubview(v1)
+        v1.addSubview(v2)
+        visualView.addSubview(v3)
+        
+        let blur = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
+ 
+        let vib = UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: blur.effect as! UIBlurEffect))
+        let lab = UILabel()
+        lab.text = "Hi~ Mr.Qi!"
+        lab.sizeToFit()
+        
+        vib.contentView.addSubview(lab)
+        lab.snp_makeConstraints { make in
+            make.edges.equalTo(vib.contentView)
+        }
+        
+        blur.contentView.addSubview(vib)
+        vib.snp_makeConstraints { make in
+            make.center.equalTo(blur.contentView)
+            make.size.equalTo(CGSize(width: 150, height: 150))
+        }
+        
+        visualView.addSubview(blur)
+        blur.snp_makeConstraints { make in
+            make.edges.equalTo(visualView)
+        }
+    }
+    
+    private func imageViewDraw() {
         imageView.contentMode = .Center
         
         let moi = UIImage(named: "moi")!
@@ -40,11 +90,6 @@ class FilterViewController: UIViewController {
         default:
             imageView.image = UIImage(CGImage: blendCGImage)
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
     }
     
     private func useSystemFilter(moiCI: CIImage) -> CIImage {

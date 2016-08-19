@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5717DA381D647E570030B446 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5717DA371D647E570030B446 /* FilterViewController.swift */; };
+		5717DA3A1D6588B40030B446 /* VisualEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5717DA391D6588B40030B446 /* VisualEffectViewController.swift */; };
+		5717DA3C1D65B9490030B446 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5717DA3B1D65B9490030B446 /* Arrow.swift */; };
 		57C4C5171D4F3DF0000E5351 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C4C5161D4F3DF0000E5351 /* Drawing.swift */; };
 		57E536731D48A83A002B659E /* logoRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E536711D48A83A002B659E /* logoRed@2x.png */; };
 		57E536741D48A83A002B659E /* logoRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E536721D48A83A002B659E /* logoRed@3x.png */; };
@@ -18,10 +20,13 @@
 		57F05EE21D33934C00EE745D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F05EE01D33934C00EE745D /* Main.storyboard */; };
 		57F05EE41D33934C00EE745D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57F05EE31D33934C00EE745D /* Assets.xcassets */; };
 		57F05EE71D33934C00EE745D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F05EE51D33934C00EE745D /* LaunchScreen.storyboard */; };
+		6D70580D27195470ED97AB8F /* Pods_Programming_iOS_9_Learning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA154C8F86CE946AF53E207A /* Pods_Programming_iOS_9_Learning.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5717DA371D647E570030B446 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		5717DA391D6588B40030B446 /* VisualEffectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectViewController.swift; sourceTree = "<group>"; };
+		5717DA3B1D65B9490030B446 /* Arrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
 		57C4C5161D4F3DF0000E5351 /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		57E536711D48A83A002B659E /* logoRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoRed@2x.png"; sourceTree = "<group>"; };
 		57E536721D48A83A002B659E /* logoRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoRed@3x.png"; sourceTree = "<group>"; };
@@ -34,6 +39,9 @@
 		57F05EE31D33934C00EE745D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57F05EE61D33934C00EE745D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57F05EE81D33934C00EE745D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A06E4E664CD19AD160A67224 /* Pods-Programming iOS 9 Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Programming iOS 9 Learning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Programming iOS 9 Learning/Pods-Programming iOS 9 Learning.debug.xcconfig"; sourceTree = "<group>"; };
+		BA154C8F86CE946AF53E207A /* Pods_Programming_iOS_9_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Programming_iOS_9_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35E283105F856627BA603D2 /* Pods-Programming iOS 9 Learning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Programming iOS 9 Learning.release.xcconfig"; path = "Pods/Target Support Files/Pods-Programming iOS 9 Learning/Pods-Programming iOS 9 Learning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +49,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D70580D27195470ED97AB8F /* Pods_Programming_iOS_9_Learning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A992AA9BC922FE99AAB495E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA154C8F86CE946AF53E207A /* Pods_Programming_iOS_9_Learning.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		57E536701D48A815002B659E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +80,8 @@
 			children = (
 				57F05EDB1D33934C00EE745D /* Programming iOS 9 Learning */,
 				57F05EDA1D33934C00EE745D /* Products */,
+				BE6803EF261172E3C85F8D84 /* Pods */,
+				3A992AA9BC922FE99AAB495E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,13 +100,24 @@
 				57F05EDC1D33934C00EE745D /* AppDelegate.swift */,
 				57F05EDE1D33934C00EE745D /* ViewController.swift */,
 				5717DA371D647E570030B446 /* FilterViewController.swift */,
+				5717DA391D6588B40030B446 /* VisualEffectViewController.swift */,
 				57C4C5161D4F3DF0000E5351 /* Drawing.swift */,
+				5717DA3B1D65B9490030B446 /* Arrow.swift */,
 				57F05EE01D33934C00EE745D /* Main.storyboard */,
 				57F05EE31D33934C00EE745D /* Assets.xcassets */,
 				57F05EE51D33934C00EE745D /* LaunchScreen.storyboard */,
 				57F05EE81D33934C00EE745D /* Info.plist */,
 			);
 			path = "Programming iOS 9 Learning";
+			sourceTree = "<group>";
+		};
+		BE6803EF261172E3C85F8D84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A06E4E664CD19AD160A67224 /* Pods-Programming iOS 9 Learning.debug.xcconfig */,
+				D35E283105F856627BA603D2 /* Pods-Programming iOS 9 Learning.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57F05EEB1D33934C00EE745D /* Build configuration list for PBXNativeTarget "Programming iOS 9 Learning" */;
 			buildPhases = (
+				C85D0ABDB90ABFB17081416F /* [CP] Check Pods Manifest.lock */,
 				57F05ED51D33934C00EE745D /* Sources */,
 				57F05ED61D33934C00EE745D /* Frameworks */,
 				57F05ED71D33934C00EE745D /* Resources */,
+				54F5A84AF290031A18C74B97 /* [CP] Embed Pods Frameworks */,
+				494F6B007C03FE6AEE88E06B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,6 +194,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		494F6B007C03FE6AEE88E06B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Programming iOS 9 Learning/Pods-Programming iOS 9 Learning-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54F5A84AF290031A18C74B97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Programming iOS 9 Learning/Pods-Programming iOS 9 Learning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C85D0ABDB90ABFB17081416F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		57F05ED51D33934C00EE745D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -169,7 +250,9 @@
 				57F05EDF1D33934C00EE745D /* ViewController.swift in Sources */,
 				57F05EDD1D33934C00EE745D /* AppDelegate.swift in Sources */,
 				5717DA381D647E570030B446 /* FilterViewController.swift in Sources */,
+				5717DA3A1D6588B40030B446 /* VisualEffectViewController.swift in Sources */,
 				57C4C5171D4F3DF0000E5351 /* Drawing.swift in Sources */,
+				5717DA3C1D65B9490030B446 /* Arrow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +363,7 @@
 		};
 		57F05EEC1D33934C00EE745D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A06E4E664CD19AD160A67224 /* Pods-Programming iOS 9 Learning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Programming iOS 9 Learning/Info.plist";
@@ -292,6 +376,7 @@
 		};
 		57F05EED1D33934C00EE745D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35E283105F856627BA603D2 /* Pods-Programming iOS 9 Learning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Programming iOS 9 Learning/Info.plist";

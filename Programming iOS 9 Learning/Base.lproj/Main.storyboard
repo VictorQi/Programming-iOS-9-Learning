@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="608" y="483"/>
         </scene>
-        <!--View Controller-->
+        <!--Visual Effect View Controller-->
         <scene sceneID="eAU-Db-E6j">
             <objects>
-                <viewController id="ltc-G7-sWz" sceneMemberID="viewController">
+                <viewController id="ltc-G7-sWz" customClass="VisualEffectViewController" customModule="Programming_iOS_9_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u8X-zr-pS1"/>
                         <viewControllerLayoutGuide type="bottom" id="OTA-cy-0Jr"/>
@@ -89,19 +89,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VbJ-xw-ilD">
-                                <rect key="frame" x="60" y="104" width="480" height="456"/>
+                                <rect key="frame" x="60" y="104" width="480" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fRw-jA-dCa"/>
+                                </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8W-1L-Dfb">
+                                <rect key="frame" x="60" y="344" width="480" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vrl-YE-wdY" firstAttribute="top" secondItem="VbJ-xw-ilD" secondAttribute="bottom" constant="40" id="0Ms-RB-BCv"/>
                             <constraint firstItem="VbJ-xw-ilD" firstAttribute="leading" secondItem="arD-pQ-YGW" secondAttribute="leadingMargin" constant="40" id="6ma-dL-G4U"/>
+                            <constraint firstItem="vrl-YE-wdY" firstAttribute="top" secondItem="w8W-1L-Dfb" secondAttribute="bottom" constant="40" id="Kv9-8H-KiY"/>
                             <constraint firstItem="VbJ-xw-ilD" firstAttribute="top" secondItem="Hgv-Ta-VV1" secondAttribute="bottom" constant="40" id="MgR-Vr-5IR"/>
+                            <constraint firstItem="w8W-1L-Dfb" firstAttribute="top" secondItem="VbJ-xw-ilD" secondAttribute="bottom" constant="40" id="Rbn-U0-nMu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VbJ-xw-ilD" secondAttribute="trailing" constant="40" id="Zo2-fF-36k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w8W-1L-Dfb" secondAttribute="trailing" constant="40" id="iy6-ds-ooW"/>
+                            <constraint firstItem="w8W-1L-Dfb" firstAttribute="leading" secondItem="arD-pQ-YGW" secondAttribute="leadingMargin" constant="40" id="uhX-Q9-jg8"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="VbJ-xw-ilD" id="71q-pm-37u"/>
+                        <outlet property="visualView" destination="w8W-1L-Dfb" id="hGb-To-rc5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pT9-Zi-heK" userLabel="First Responder" sceneMemberID="firstResponder"/>

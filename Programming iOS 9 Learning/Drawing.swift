@@ -11,6 +11,7 @@ import UIKit
 class Drawing: UIView {
   
     override func drawRect(rect: CGRect) {}
+    
     override func drawLayer(layer: CALayer, inContext ctx: CGContext) {
         CGContextAddEllipseInRect(ctx, CGRect(x: 0, y: 0, width: 100, height: 100))
         CGContextSetFillColorWithColor(ctx, UIColor.blueColor().CGColor)
