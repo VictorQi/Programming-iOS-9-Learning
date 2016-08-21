@@ -19,6 +19,8 @@
 		57F05EE41D33934C00EE745D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57F05EE31D33934C00EE745D /* Assets.xcassets */; };
 		57F05EE71D33934C00EE745D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F05EE51D33934C00EE745D /* LaunchScreen.storyboard */; };
 		B6A005E01D66055000E5CFF7 /* ArrowWithEOClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A005DF1D66055000E5CFF7 /* ArrowWithEOClip.swift */; };
+		B6A005E21D6842C200E5CFF7 /* ArrowWithGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A005E11D6842C200E5CFF7 /* ArrowWithGradient.swift */; };
+		B6A005E41D69985600E5CFF7 /* ArrowWithStripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A005E31D69985600E5CFF7 /* ArrowWithStripes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		57F05EE61D33934C00EE745D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57F05EE81D33934C00EE745D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6A005DF1D66055000E5CFF7 /* ArrowWithEOClip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowWithEOClip.swift; sourceTree = "<group>"; };
+		B6A005E11D6842C200E5CFF7 /* ArrowWithGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowWithGradient.swift; sourceTree = "<group>"; };
+		B6A005E31D69985600E5CFF7 /* ArrowWithStripes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowWithStripes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				5717DA371D647E570030B446 /* FilterViewController.swift */,
 				57C4C5161D4F3DF0000E5351 /* Drawing.swift */,
 				B6A005DF1D66055000E5CFF7 /* ArrowWithEOClip.swift */,
+				B6A005E11D6842C200E5CFF7 /* ArrowWithGradient.swift */,
+				B6A005E31D69985600E5CFF7 /* ArrowWithStripes.swift */,
 				57F05EE01D33934C00EE745D /* Main.storyboard */,
 				57F05EE31D33934C00EE745D /* Assets.xcassets */,
 				57F05EE51D33934C00EE745D /* LaunchScreen.storyboard */,
@@ -170,9 +176,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				57F05EDF1D33934C00EE745D /* ViewController.swift in Sources */,
+				B6A005E21D6842C200E5CFF7 /* ArrowWithGradient.swift in Sources */,
 				57F05EDD1D33934C00EE745D /* AppDelegate.swift in Sources */,
 				5717DA381D647E570030B446 /* FilterViewController.swift in Sources */,
 				B6A005E01D66055000E5CFF7 /* ArrowWithEOClip.swift in Sources */,
+				B6A005E41D69985600E5CFF7 /* ArrowWithStripes.swift in Sources */,
 				57C4C5171D4F3DF0000E5351 /* Drawing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

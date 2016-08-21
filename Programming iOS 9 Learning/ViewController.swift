@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         
 //        let drawing = Drawing(frame: CGRect(x: 180, y: 64, width: 100, height: 100))
 //        mainview.addSubview(drawing)
-        let drawing = ArrowWithEOClip(frame: CGRect(x: 180, y: 64, width: 200, height: 200))
+        let drawing = ArrowWithStripes(frame: CGRect(x: 180, y: 64, width: 200, height: 200))
         mainview.addSubview(drawing)
         
         drawingIntoPicture(from: mainview)

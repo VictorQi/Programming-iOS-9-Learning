@@ -20,7 +20,7 @@ class ArrowWithEOClip: UIView {
     }
     
     override func drawRect(rect: CGRect) {
-        let con = UIGraphicsGetCurrentContext()
+        let con = UIGraphicsGetCurrentContext()!
         
         CGContextMoveToPoint(con, 90, 100)
         CGContextAddLineToPoint(con, 100, 90)
