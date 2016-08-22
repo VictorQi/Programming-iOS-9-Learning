@@ -27,8 +27,7 @@ class ArrowWithEOClip: UIView {
         CGContextAddLineToPoint(con, 110, 100)
         CGContextClosePath(con)
         
-        let outTriangle = CGContextGetClipBoundingBox(con)
-        CGContextAddRect(con, outTriangle)
+        CGContextAddRect(con, CGContextGetClipBoundingBox(con))
         CGContextEOClip(con)
         
         CGContextMoveToPoint(con, 100, 100)
